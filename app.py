@@ -8,7 +8,7 @@ from streamlit_autorefresh import st_autorefresh
 station_info_url = "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json"
 station_status_url = "https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json"
 
-st.title("Boston Bluebikes Station Tracker")
+st.title("Boston Bluebikes Station Tracker 🚲")
 st.markdown("This dashboard tracks bike availability at each Bluebikes station in the Boston area.")
 
 data_df = query_station_status(station_status_url) # Get the station status data
@@ -36,7 +36,7 @@ input_bike_modes = []
 
 
 with st.sidebar:
-    st.subheader("Refresh")
+    st.subheader("🔄 Refresh")
     auto = st.toggle("Auto-refresh every 30s", value=True)
     if st.button("Refresh Now"):
         st.cache_data.clear()
@@ -60,7 +60,7 @@ with st.sidebar:
             else:
                 st.error("Please enter a street address") # Error message if street address is empty 
     elif bike_method == 'Return':
-        st.subheader("Where are you located?")
+        st.subheader("📍 Where are you located?")
         input_street = st.text_input("Street Address", value="") # Input street address
         input_city = st.text_input("City", value="Boston") # Input city
         input_state = st.text_input("State", value="MA") # Input state
