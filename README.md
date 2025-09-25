@@ -4,11 +4,11 @@ A real-time dashboard tracking bike availability across Boston's Bluebikes bike-
 
 ## Features
 
-- **Real-time Tracking:** Auto-refreshes every 30 seconds to show current bike availability
-- **Interactive Maps:** Visual representation of all Bluebike stations with color-coded availability
+- **Real-time Tracking:** Auto-refreshes every 30 seconds to show current bike and dock availability
+- **Interactive Maps:** Visual representation of all Bluebike stations in the Boston area with color-coded availability 
 - **Smart Search:** 
   - Find nearest available bikes (regular or e-bikes)
-  - Locate available docks for returns
+  - Locate nearest available docks for returns
   - Walking directions with estimated travel time
 - **System Stats:** 
   - Total bikes and e-bikes available
@@ -17,11 +17,25 @@ A real-time dashboard tracking bike availability across Boston's Bluebikes bike-
 
 ## Technologies Used
 
-- Python 3.8
+- Python
+- Pandas
 - Streamlit
 - Folium (mapping)
-- GBFS (General Bikeshare Feed Specification)
-- OpenStreetMap Routing Machine (OSRM)
+
+### APIs
+1. **Bluebikes GBFS Boston (General Bikeshare Feed Specification)**
+   - Station Information
+   - Real-time station status
+   - Bike availability data
+
+2. **Nominatim Geocoding API**
+   - Address to coordinate conversion
+   - Reverse geocoding capabilities
+
+3. **OpenStreetMap Routing Machine (OSRM)**
+   - Walking routes
+   - Distance calculations
+   - Turn-by-turn directions
 
 ## Getting Started
 
@@ -48,6 +62,8 @@ streamlit run app.py
 ## Data Source
 
 **Bluebikes GBFS API**
+  - Update frequency: 30 seconds
+  - Data format: JSON
    - Station Information: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json`
    - Station Status: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json`
 
