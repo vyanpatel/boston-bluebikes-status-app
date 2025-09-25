@@ -27,7 +27,7 @@ A real-time dashboard tracking bike availability across Boston's Bluebikes bike-
 
 1. Clone the repository
 ```bash
-git clone [your-repo-url]
+git clone https://github.com/vyanpatel/boston-bluebikes-status-app.git
 ```
 
 2. Create conda environment
