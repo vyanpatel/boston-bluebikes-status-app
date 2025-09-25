@@ -45,20 +45,13 @@ streamlit run app.py
 
 [Add your deployed app URL here]
 
-## Screenshots
-
-[Add screenshots of your app here]
-
 ## Data Source
 
-This project uses real-time data from the Bluebikes GBFS feed:
-- Station Information: https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json
-- Station Status: https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json
+**Bluebikes GBFS API**
+   - Station Information: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json`
+   - Station Status: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json`
 
 ## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-[Choose and add your license here]
