@@ -17,10 +17,22 @@ A real-time dashboard tracking bike availability across Boston's Bluebikes bike-
 
 ## Technologies Used
 
-- Python
-- Pandas
-- Streamlit
-- Folium (mapping)
+### Data Processing
+- **Pandas** - Data manipulation and analysis
+- **JSON** - Data format parsing
+- **urllib** - URL handling and requests
+- **datetime** - Time series handling
+
+### Geospatial Tools
+- **GeoPy** 
+  - Distance calculations (geodesic)
+  - Geocoding (Nominatim)
+- **OSRM** (OpenStreetMap Routing Machine)
+  - Route calculations
+  - Walking directions
+  - Duration estimates
+
+
 
 ### APIs
 1. **Bluebikes GBFS Boston (General Bikeshare Feed Specification)**
@@ -36,6 +48,10 @@ A real-time dashboard tracking bike availability across Boston's Bluebikes bike-
    - Walking routes
    - Distance calculations
    - Turn-by-turn directions
+  
+### Development Tools
+- **Python** - Core programming language
+- **Conda** - Environment management
 
 ## Getting Started
 
@@ -60,7 +76,6 @@ streamlit run app.py
 [Add your deployed app URL here]
 
 ## Data Source
-
 **Bluebikes GBFS API**
   - Update frequency: 30 seconds
   - Data format: JSON
