@@ -81,8 +81,3 @@ streamlit run app.py
   - Data format: JSON
    - Station Information: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_information.json`
    - Station Status: `https://gbfs.lyft.com/gbfs/1.1/bos/en/station_status.json`
-
-## Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
-
