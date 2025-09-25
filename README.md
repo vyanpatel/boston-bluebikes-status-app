@@ -62,18 +62,25 @@ git clone https://github.com/vyanpatel/boston-bluebikes-status-app.git
 
 2. Create conda environment
 ```bash
-conda env create -f environment.yml
+conda create --name bluebikes_streamlit
 conda activate bluebikes_streamlit
 ```
-
-3. Run the app
+3. Install pip if it is not in the conda environment
+   ```bash
+   pip --version
+   conda install pip
+   ```
+4. Install the requirements into the conda environment
+   ```bash
+   pip install -r requirements.txt
+6. Run the app
 ```bash
 streamlit run app.py
 ```
 
 ## Live Demo
 
-[Add your deployed app URL here]
+https://boston-bluebikes-tracker-app.streamlit.app/
 
 ## Data Source
 **Bluebikes GBFS API**
