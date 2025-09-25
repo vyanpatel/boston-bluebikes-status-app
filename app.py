@@ -46,7 +46,7 @@ with st.sidebar:
     if bike_method == 'Rent':
         input_bike_modes = st.multiselect("Select bike types to rent:", ['Ebike', 'Mechanical'])
         input_bike_modes = [item.lower() for item in input_bike_modes]
-        st.header("Where are you located?")
+        st.header("📍 Where are you located?")
         input_street = st.text_input("Street Address", value="") # Input street address
         input_city = st.text_input("City", value="Boston") # Input city
         input_state = st.text_input("State", value="MA") # Input state
