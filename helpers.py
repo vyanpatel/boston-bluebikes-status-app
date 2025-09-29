@@ -37,16 +37,16 @@ def get_station_latlon(url):
 
 # Define the function to join two DataFrames on station_id
 def join_latlon(df1, df2):
-    df = df1.merge(df2[['station_id', 'lat', 'lon']], 
+    df = df1.merge(df2[['station_id', 'lat', 'lon', 'name']], 
                 how='left', 
                 on='station_id')  # Merge the DataFrames on station_id
     return df  # Return the merged DataFrame
 
 # Function to determine marker color based on the number of bikes available
 def get_marker_color(num_bikes_available):
-    if num_bikes_available > 3:
+    if num_bikes_available > 5:
         return 'green'
-    elif 0 < num_bikes_available <= 3:
+    elif 0 < num_bikes_available <= 5:
         return 'yellow'
     else:
         return 'red'
@@ -74,7 +74,7 @@ def get_bike_availability(latlon, df, input_bike_modes):
         chosen_station.append(df[df['distance'] == min(df['distance'])]['station_id'].iloc[0])  # Get closest station
         chosen_station.append(df[df['distance'] == min(df['distance'])]['lat'].iloc[0])
         chosen_station.append(df[df['distance'] == min(df['distance'])]['lon'].iloc[0])
-        chosen_station.append(df[df['distance'] == min(df['distance'])]['num_bikes_available'].iloc[0])
+        chosen_station.append(df[df['distance'] == min(df['distance'])]['num_mechanical_bikes_available'].iloc[0])
         chosen_station.append(df[df['distance'] == min(df['distance'])]['num_ebikes_available'].iloc[0])
     else:    
         i = 0
